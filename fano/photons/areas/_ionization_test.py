@@ -21,6 +21,7 @@ _energy = [
         fano.photons.areas.area_photoionization_m1,
         fano.photons.areas.area_photoionization_m2,
         fano.photons.areas.area_photoionization_m3,
+        fano.photons.areas.area_photoionization,
     ],
 )
 @pytest.mark.parametrize("energy", _energy)

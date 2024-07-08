@@ -12,6 +12,7 @@ __all__ = [
     "area_photoionization_m1",
     "area_photoionization_m2",
     "area_photoionization_m3",
+    "area_photoionization",
 ]
 
 _path_epdl = pathlib.Path(__file__).parent / "epdl-silicon.endf"
@@ -200,3 +201,29 @@ def area_photoionization_m3(energy: u.Quantity) -> u.Quantity:
 @numba.njit
 def _area_photoionization_m3(energy: np.ndarray) -> np.ndarray:
     return np.interp(energy, _energy_m3, _area_m3)
+
+
+def area_photoionization(energy: u.Quantity) -> u.Quantity:
+    """
+    Calculate the total photoionization cross-sectional area of silicon.
+
+    Parameters
+    ----------
+    energy
+        The energy of the incident photon
+    """
+    energy = energy.to_value(_unit_energy, equivalencies=u.spectral())
+    result = _area_photoionization(energy) << _unit_area
+    return result
+
+
+@numba.njit
+def _area_photoionization(energy: np.ndarray) -> np.ndarray:
+    a_k1 = _area_photoionization_k1(energy)
+    a_l1 = _area_photoionization_l1(energy)
+    a_l2 = _area_photoionization_l2(energy)
+    a_l3 = _area_photoionization_l3(energy)
+    a_m1 = _area_photoionization_m1(energy)
+    a_m2 = _area_photoionization_m2(energy)
+    a_m3 = _area_photoionization_m3(energy)
+    return a_k1 + a_l1 + a_l2 + a_l3 + a_m1 + a_m2 + a_m3
