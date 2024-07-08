@@ -90,8 +90,7 @@ def _area_photoionization_k1(energy: np.ndarray) -> np.ndarray:
 
 def area_photoionization_l1(energy: u.Quantity) -> u.Quantity:
     """
-    Calculate the cross-section area of the :math:`L_1` shell for a photon of a
-    given energy.
+    Calculate the photoionization cross-sectional area of the :math:`L_1` subshell.
 
     Parameters
     ----------
@@ -110,8 +109,7 @@ def _area_photoionization_l1(energy: np.ndarray) -> np.ndarray:
 
 def area_photoionization_l2(energy: u.Quantity) -> u.Quantity:
     """
-    Calculate the cross-section area of the :math:`L_2` shell for a photon of a
-    given energy.
+    Calculate the photoionization cross-sectional area of the :math:`L_2` subshell.
 
     Parameters
     ----------
@@ -130,8 +128,7 @@ def _area_photoionization_l2(energy: np.ndarray) -> np.ndarray:
 
 def area_photoionization_l3(energy: u.Quantity) -> u.Quantity:
     """
-    Calculate the cross-section area of the :math:`L_3` shell for a photon of a
-    given energy.
+    Calculate the photoionization cross-sectional area of the :math:`L_3` subshell.
 
     Parameters
     ----------
@@ -150,8 +147,7 @@ def _area_photoionization_l3(energy: np.ndarray) -> np.ndarray:
 
 def area_photoionization_m1(energy: u.Quantity) -> u.Quantity:
     """
-    Calculate the cross-section area of the :math:`M_1` shell for a photon of a
-    given energy.
+    Calculate the photoionization cross-sectional area of the :math:`M_1` subshell.
 
     Parameters
     ----------
@@ -170,8 +166,7 @@ def _area_photoionization_m1(energy: np.ndarray) -> np.ndarray:
 
 def area_photoionization_m2(energy: u.Quantity) -> u.Quantity:
     """
-    Calculate the cross-section area of the :math:`M_2` shell for a photon of a
-    given energy.
+    Calculate the photoionization cross-sectional area of the :math:`M_2` subshell.
 
     Parameters
     ----------
@@ -190,8 +185,7 @@ def _area_photoionization_m2(energy: np.ndarray) -> np.ndarray:
 
 def area_photoionization_m3(energy: u.Quantity) -> u.Quantity:
     """
-    Calculate the cross-section area of the :math:`M_3` shell for a photon of a
-    given energy.
+    Calculate the photoionization cross-sectional area of the :math:`M_3` subshell.
 
     Parameters
     ----------
