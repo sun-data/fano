@@ -17,6 +17,7 @@ dependencies = [
     "numpy",
     "astropy",
     "numba",
+    "endf",
 ]
 dynamic = ["version"]
 
