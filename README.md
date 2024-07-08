@@ -8,3 +8,11 @@
 [![PyPI version](https://badge.fury.io/py/fano.svg)](https://badge.fury.io/py/fano)
 
 A Python library for modeling the Fano factor and pair-creation energy of silicon
+
+## Installation
+
+This package is published on PyPI and can be installed using pip:
+
+```bash
+pip install fano
+```
